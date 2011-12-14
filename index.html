@@ -1,0 +1,245 @@
+<!doctype html>
+<!--[if lt IE 7 ]>
+<html class="no-js ie6" lang="ru"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="no-js ie7" lang="ru"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="no-js ie8" lang="ru"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="ru"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="shortcut icon" type="image/x-icon" href="bitrix/templates/entrance/favicon.ico"/>
+    <title>Шопинг-клуб номер 1 в Украине – Le Boutique | Ле Бутик</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="bitrix/templates/entrance/favicon.ico"/>
+
+    <link rel="stylesheet" type="text/css" href="bitrix/templates/entrance/css/jquery.jgrowl.css"/>
+    <link rel="stylesheet" type="text/css" href="bitrix/templates/entrance/css/jquery.validationEngine.css"/>
+    <link rel="stylesheet" type="text/css" href="bitrix/templates/entrance/css/jquery.fancybox-1.3.4.css"/>
+    <link rel="stylesheet" type="text/css" href="bitrix/templates/entrance/css/styles.css"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="robots" content="index, follow"/>
+
+
+    <script type="text/javascript" src="bitrix/templates/entrance/js/jquery-1.6.1.js"></script>
+    <script type="text/javascript" src="bitrix/templates/entrance/js/init.js"></script>
+    <script type="text/javascript" src="bitrix/templates/entrance/js/jquery.jgrowl.js"></script>
+    <script type="text/javascript" src="bitrix/templates/entrance/js/jquery.validationEngine-ru.js"></script>
+    <script type="text/javascript" src="bitrix/templates/entrance/js/jquery.validationEngine.js"></script>
+    <script type="text/javascript" src="bitrix/templates/entrance/js/jquery.fancybox-1.3.4.js"></script>
+
+    <script type="text/javascript" src="bitrix/templates/entrance/js/functions.js"></script>
+
+
+    <title>LeBoutique</title>
+
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="bitrix/templates/entrance/js/ie6-fix.js"></script>
+    <script type="text/javascript" src="bitrix/templates/entrance/js/jquery.pngFix.lb.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('div.auth-box').pngFix();
+
+        });
+    </script>
+    <![endif]-->
+
+    <!--[if lt IE 9 ]>
+    <script type="text/javascript">
+        document.createElement('header');
+        document.createElement('hgroup');
+        document.createElement('nav');
+        document.createElement('menu');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('aside');
+        document.createElement('footer');
+    </script>
+    <![endif]-->
+</head>
+<body>
+
+<div id="container">
+<div id="background" class="bg_site horizontal"><img src="bitrix/templates/entrance/img/bg/11.jpg" alt=""
+                                                     id="background-image"></div>
+
+<div id="main">
+    <a href="/" class="logo"></a>
+
+
+    <div class="auth-box">
+        <div id="auth-all" class="auth-all" rel="login_form">
+
+
+            <div id="auth-form" class="auth-top">
+                <div class="title">Вход в клуб</div>
+                <form name="form_auth" id="form_auth" method="post" target="_top" action="/?login=yes">
+                    <input type="hidden" name="auth_form" value="login"/>
+                    <input type="hidden" name="AUTH_FORM" value="Y"/>
+                    <input type="hidden" name="TYPE" value="AUTH"/>
+                    <input type="hidden" name="USER_REMEMBER" value="Y"/>
+                    <input type="hidden" name="backurl" value="/"/>
+
+
+                    <div class="login">
+                        <label for="USER_LOGIN">Логин/E-mail:</label><br/>
+
+                        <div><input class="validate[required,custom[email]]" type="text" name="USER_LOGIN"
+                                    id="USER_LOGIN" maxlength="255" value="sourcer@land.ru"/></div>
+                    </div>
+
+                    <div class="password">
+                        <label for="USER_PASSWORD">Пароль:</label><br/>
+
+                        <div><input class="validate[required,minSize[6]]" type="password" name="USER_PASSWORD"
+                                    id="USER_PASSWORD" maxlength="255"/></div>
+                    </div>
+
+
+                    <div class="controls clearfix">
+                        <div class="submit-links">
+                            <div class="alien">
+                                <input type="checkbox" id="USER_REMEMBER" name="USER_REMEMBER" value="N"/> <label
+                                    for="USER_REMEMBER">чужой компьютер</label>
+                            </div>
+                            <div class="forgot">
+                                <a href="personal/forgot-password/" rel="nofollow">забыли пароль?</a>
+
+                            </div>
+                        </div>
+
+                        <div class="submit">
+                            <input type="submit" class="auth-login-btn" name="Login" value="ВОЙТИ"/>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <div id="reg-form" class="auth-top" style="display:block;">
+                <div class="title">Регистрация</div>
+
+                <form name="form_reg" id="form_reg" method="post" target="_top" action="/ajax/check.php">
+                    <input type="hidden" name="auth_form" value="registration"/>
+
+                    <div class="login">
+                        <label for="RUSER_EMAIL">Ваш e-mail:</label><br/>
+
+                        <div><input class="validate[required,custom[email],ajax[ajaxUserCall]]" type="text"
+                                    name="USER_EMAIL" id="EMAIL" maxlength="255" value=""/></div>
+                    </div>
+
+                    <div class="password">
+                        <label for="RUSER_PASSWORD">Выберите себе пароль (минимум 6 символов):</label><br/>
+
+                        <div><input class="validate[required,minSize[6]]" type="password" name="USER_PASSWORD"
+                                    id="RUSER_PASSWORD" maxlength="255"/></div>
+                    </div>
+
+                    <div class="gender">
+                        <label>Ваш пол:</label><br/>
+                        <input id="GENDER_M" type="radio" name="USER_GENDER" value="M"/> <label
+                            for="GENDER_M">мужской</label>
+                        <input id="GENDER_F" type="radio" name="USER_GENDER" value="F"/> <label
+                            for="GENDER_F">женский</label>
+
+                    </div>
+
+                    <div class="terms">
+                        <input class="validate[required]" id="TERMS" type="checkbox" checked="checked" name="TERMS"
+                               value="Y"/> <label for="TERMS">я согласен с <a href="/main-agreement/">условиями
+                        публичной оферты</a></label>
+                    </div>
+
+                    <div class="controls clearfix">
+                        <div class="submit">
+                            <input class="auth-reg-btn" type="submit" name="Register" value="РЕГИСТРАЦИЯ"/>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+            <div id="confirm-form" class="auth-top" style="display:none;">
+                <div class="title">Активация</div>
+                <form name="form_confirm" method="post" target="_top" action="/personal/activation/">
+                    <input type="hidden" name="auth_form" value="confirmation"/>
+
+                    <input type="hidden" name="uid" id="activation_uid" value=""/>
+
+                    <div class="confirm-info">На указанный вами e-mail адрес выслано письмо с кодом для подтверждения
+                        регистрации.<br/>Введите, пожалуйста, полученный код в поле ниже.
+                    </div>
+
+                    <div class="confirm">
+                        <label for="CONFIRM_CODE">Код подтверждения:</label><br/>
+
+                        <div><input class="validate[required,minSize[8]]" type="text" name="code" id="CONFIRM_CODE"
+                                    maxlength="255"/></div>
+                    </div>
+
+                    <div class="controls clearfix">
+
+                        <div class="submit">
+                            <input class="auth-reg-btn" type="submit" name="Confirm" value="ПОДТВЕРДИТЬ"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+
+        <div class="auth-bottom">
+            <input id="auth-login-btn" type="button" name="login" value="ВОЙТИ" style="display:none"/>
+
+            <input id="auth-reg-btn" type="button" name="register" value="РЕГИСТРАЦИЯ"/>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function() {
+        $("a[class=simple-acc-lnk]").click(function(e) {
+            //Cancel the link behavior
+            e.preventDefault();
+            $('.b-modal').hide();
+            //Get the A tag link
+            var id = $(this).attr('href');
+            // slideToggle accordion target
+            $(id).fadeToggle("fast");
+        });
+
+        //if close button is clicked
+        $('div.b-modal a.b-btn-close').click(function (e) {
+            //Cancel the link behavior
+            e.preventDefault();
+            $('.b-modal').hide();
+        });
+
+        // if Esc button is pressed
+        $(document).keydown(function(event) {
+            if (event.keyCode == '27') {
+                $('.b-modal').hide();
+            }
+        });
+    });
+    //]]>
+</script>
+
+
+</div>
+<!--! end of #container -->
+
+
+
+</body>
+</html>
